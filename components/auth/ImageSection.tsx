@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ImageSection = () => {
     return (
-        <div className="hidden md:block relative">
+        <div className="lg:flex hidden relative">
             <div className="">
                 <Image
                     src="/images/authImage.svg"

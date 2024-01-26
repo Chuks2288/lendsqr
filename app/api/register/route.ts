@@ -10,6 +10,16 @@ export async function POST(
     try {
         const { email, password, name } = await req.json();
 
+        const existingUser = await db.user.findUnique({
+            where: {
+                email,
+            }
+        });
+
+        if (existingUser) {
+            return new NextResponse("Email Already Exist", { status: 422 });
+        }
+
         const hashedPassword = await bcrypt.hash(password, 12);
 
         const register = await db.user.create({

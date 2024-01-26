@@ -7,6 +7,7 @@ import UserSavings from "@/app/dashboard/(pages)/users/userGeneral/UserSavings";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation"
+import UserScreenRender from "./UserScreenRender";
 
 
 type Path =
@@ -55,26 +56,48 @@ const UserNavigation = () => {
     } satisfies Record<Path, JSX.Element>
 
     return (
-        <div className="w-full">
-            <div className="w-full flex items-center justify-between">
-                {SETUP_DATA.map((item) => (
-                    <Link
-                        href={`?action=${item.name}`}
-                        className={cn(
-                            "text-black text-sm pb-2 font-semibold",
-                            currentAction === item.name && "border-b-2 border-[#39CDCC] text-[#39CDCC] transition"
-                        )}
-                        key={item.name}
+        <div className="">
+            <div className="w-full bg-white px-5">
+                {/* Mobile Navigation */}
+                <div className="block lg:hidden">
+                    <select
+                        onChange={(e) => {
+                            const selectedAction = e.target.value;
+                            router.push(`?action=${selectedAction}`);
+                        }}
+                        value={currentAction}
+                        className="w-full p-2 bg-gray-100 border border-gray-300 rounded-md"
                     >
-                        <p>{item.name}</p>
-                    </Link>
-                ))}
-            </div>
+                        {SETUP_DATA.map((item) => (
+                            <option key={item.name} value={item.name}>
+                                {item.name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
 
-            <div className="h-max mt-10">
-                {renderScreens[currentAction]}
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex items-center justify-between gap-10 overflow-x-auto">
+                    {SETUP_DATA.map((item) => (
+                        <Link
+                            href={`?action=${item.name}`}
+                            className={cn(
+                                "text-black text-sm pb-2 font-semibold ",
+                                currentAction === item.name && "border-b-2 border-[#39CDCC] text-[#39CDCC] transition"
+                            )}
+                            key={item.name}
+                        >
+                            <p>{item.name}</p>
+                        </Link>
+                    ))}
+                </div>
+
+                {/* Content */}
+
             </div>
+            <UserScreenRender currentScreen={renderScreens[currentAction]} />
         </div>
+
     )
 }
 

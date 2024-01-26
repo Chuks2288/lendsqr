@@ -3,6 +3,7 @@
 import BreadCrumb from "@/components/BreadCrumb"
 import UserDetailsContent from "@/components/user/UserDetailsContent"
 import UserDetailsHeader from "@/components/user/UserDetailsHeader"
+import UserNavigation from "@/components/user/UserNavigation";
 import { data } from "@/components/user/data"
 import { MoveLeft } from "lucide-react"
 import Link from "next/link"
@@ -32,6 +33,8 @@ const page = () => {
                 bankName={dataInfo?.bankName}
             />
 
+
+            {/* 
             <UserDetailsContent
                 id={dataInfo?.id}
                 fullName={dataInfo?.fullName}
@@ -56,7 +59,7 @@ const page = () => {
                 guarantorContact={dataInfo?.guarantorContact}
                 guarantorEmail={dataInfo?.guarantorEmail}
                 relationship={dataInfo?.relationship}
-            />
+            /> */}
         </main>
     )
 }

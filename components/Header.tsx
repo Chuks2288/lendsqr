@@ -13,7 +13,7 @@ const Header = ({
             <h1 className="text-xl font-bold text-blue-70">
                 {title}
             </h1>
-            <p>
+            <p className="text-sm font-bold text-blue-70">
                 {subTitle}
             </p>
         </div>

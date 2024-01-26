@@ -62,14 +62,14 @@ const RegisterSection = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center p-8 md:p-0">
+        <div className="flex flex-col justify-center items-center p-8 md:p-0 w-full">
             <div className="py-8">
                 <h1 className="font-extrabold text-blue-70 text-3xl">Welcome!</h1>
                 <p className="text-md text-blue-50">Registration</p>
             </div>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="">
-                    <div className="space-y-4">
+                    <div className="space-y-4 w-full">
                         {/* FormField for email */}
                         <FormField
                             control={form.control}

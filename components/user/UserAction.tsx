@@ -14,12 +14,11 @@ const userAction = [
 
 const UserAction = () => {
     return (
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
             {userAction.map((action) => (
                 <div
-                    className="p-1 px-3 rounded-[4px] border text-[11px] uppercase font-semibold cursor-pointer"
+                    className="p-1 px-3 rounded-[4px] border text-[11px] uppercase font-semibold cursor-pointer mb-2"
                     key={action.action}
-
                     style={{
                         color: action.textColor,
                         borderColor: action.borderColor,
@@ -29,6 +28,7 @@ const UserAction = () => {
                 </div>
             ))}
         </div>
+
     )
 }
 
