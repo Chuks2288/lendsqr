@@ -30,8 +30,8 @@ const Navbar = ({
                 <Container>
                     <div className="flex flex-grow items-center justify-between gap-3 md:gap-0">
                         <div className="flex items-center gap-2">
-                            <Logo />
                             <MobileToggle />
+                            <Logo />
                         </div>
                         <SearchBar
                             data={[

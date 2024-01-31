@@ -1,8 +1,14 @@
+import { LiaCoinsSolid } from "react-icons/lia";
+import { HiOutlineUsers } from "react-icons/hi";
+import { FaUsers } from "react-icons/fa";
+import { FaCoins } from "react-icons/fa";
+
 
 interface userHeaderContentProps {
     icon: string;
     title: string;
     stat: string;
+    textColor: string;
     bgColor?: string;
 }
 
@@ -439,27 +445,31 @@ export const data: Payment[] = [
 
 export const userHeaderContent: userHeaderContentProps[] = [
     {
-        icon: "/images/user1.png",
+        icon: HiOutlineUsers,
         title: "Users",
         stat: "2,453",
+        textColor: "#DF18FF",
         bgColor: "#DF18FF",
     },
     {
-        icon: "/images/user2.png",
+        icon: FaUsers,
         title: "Active Users",
         stat: "2,453",
+        textColor: "#5718FF",
         bgColor: "#5718FF",
     },
     {
-        icon: "/images/user3.png",
+        icon: FaCoins,
         title: "Users with Loans",
         stat: "12,453",
+        textColor: "#F55F44",
         bgColor: "#F55F44",
     },
     {
-        icon: "/images/user4.png",
+        icon: LiaCoinsSolid,
         title: "Users with savings",
         stat: "102,453",
+        textColor: "#FF3366",
         bgColor: "#FF3366",
     },
 ]

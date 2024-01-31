@@ -16,6 +16,7 @@ const UserHeader = () => {
                         icon={item.icon}
                         title={item.title}
                         stat={item.stat}
+                        textColor={item.textColor}
                         bgColor={item.bgColor}
                     />
                 ))}

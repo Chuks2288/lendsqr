@@ -23,14 +23,14 @@ const MobileToggle = () => {
                         Icon={<Menu />}
                     />
                 </SheetTrigger>
-                <ScrollArea>
-                    <SheetContent side="left" className="border-none bg-white p-0">
+                <SheetContent side="left" className="border-none bg-white p-0 overflow-y-scroll no-scrollbar">
+                    <ScrollArea>
                         <div className="">
                             <NavigationSidebar />
                         </div>
-                    </SheetContent>
-                    <ScrollBar orientation="vertical" />
-                </ScrollArea>
+                        <ScrollBar orientation="vertical" />
+                    </ScrollArea>
+                </SheetContent>
             </Sheet>
         </div >
     )

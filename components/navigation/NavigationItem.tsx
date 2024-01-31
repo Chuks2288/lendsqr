@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 interface NavigationItemProps {
     id: string;
@@ -18,7 +19,7 @@ const NavigationItem = ({
 }: NavigationItemProps) => {
 
     const router = useRouter();
-    const params = useParams();
+    const pathname = usePathname();
 
 
     return (
@@ -26,12 +27,12 @@ const NavigationItem = ({
             onClick={() => router.push(path)}
             className={cn(
                 "flex text-blue-70 py-2 relative cursor-pointer mb-4 hover:bg-cyan-50 transition",
-                id === params?.id && "bg-cyan-50"
+                pathname === path && "bg-cyan-50"
             )}
         >
             <div className={
                 cn("absolute left-0 top-0 bg-green-70",
-                    id === params?.id && "w-1 h-10"
+                    pathname === path && "w-1 h-10"
                 )}
             />
             <div className="flex items-center gap-2 pl-4">
