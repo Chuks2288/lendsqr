@@ -9,7 +9,7 @@ const Page = () => {
 
     return (
         <main className="grid place-items-center h-screen">
-            <div className="grid lg:grid-cols-2 grid-cols-1 w-full h-[50vh]">
+            <div className="grid lg:grid-cols-2 grid-cols-1 w-full">
 
                 <ImageSection />
 

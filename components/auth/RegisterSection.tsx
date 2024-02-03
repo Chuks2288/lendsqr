@@ -63,12 +63,13 @@ const RegisterSection = () => {
 
     return (
         <div className="flex flex-col justify-center items-center p-8 md:p-0 w-full">
-            <div className="py-8">
-                <h1 className="font-extrabold text-blue-70 text-3xl">Welcome!</h1>
-                <p className="text-md text-blue-50">Registration</p>
-            </div>
+
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="w-full md:w-[60%] px-8">
+                    <div className="py-8">
+                        <h1 className="font-extrabold text-blue-70 text-3xl">Welcome!</h1>
+                        <p className="text-md text-blue-50">Registration</p>
+                    </div>
                     <div className="space-y-4 w-full">
                         {/* FormField for email */}
                         <FormField
@@ -81,7 +82,7 @@ const RegisterSection = () => {
                                             disabled={isLoading}
                                             placeholder="Full Name"
                                             {...field}
-                                            className="w-full lg:w-[23rem] text-xsm border-2 border-[#FF] py-6 text-[#545F7D] rounded-[7px]"
+                                            className="w-full text-xsm border-2 border-[#FF] py-6 text-[#545F7D] rounded-[7px]"
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -98,7 +99,7 @@ const RegisterSection = () => {
                                             disabled={isLoading}
                                             placeholder="Email"
                                             {...field}
-                                            className="w-full lg:w-[23rem] text-xsm border-2 border-[#FF] py-6 text-[#545F7D] rounded-[7px]"
+                                            className="w-full text-xsm border-2 border-[#FF] py-6 text-[#545F7D] rounded-[7px]"
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -118,7 +119,7 @@ const RegisterSection = () => {
                                             disabled={isLoading}
                                             placeholder="Password"
                                             {...field}
-                                            className="w-full lg:w-[23rem] text-xsm border-2 
+                                            className="w-full text-xsm border-2 
                                             border-[#FF] py-6 text-[#545F7D] rounded-[7px]"
                                         />
                                         {/* <button
