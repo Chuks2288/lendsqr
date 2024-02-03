@@ -63,16 +63,16 @@ const UserMenu = ({
 
                 </DropdownMenuTrigger>
 
-                <DropdownMenuContent>
+                {/* <DropdownMenuContent>
                     <DropdownMenuItem
                         onClick={onClick}
-                        className="z-20 cursor-pointer bg-white"
+                        className="z-50 cursor-pointer bg-white z-100"
                     >
                         Sign Out
-                    </DropdownMenuItem>
-                </DropdownMenuContent>
+                    </DropdownMenuItem> */}
+                {/* </DropdownMenuContent> */}
             </DropdownMenu>
-        </div>
+        </div >
     )
 }
 

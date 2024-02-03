@@ -25,7 +25,7 @@ const UserGridBox = ({
             <div className="rounded-full w-8 h-8 flex justify-center items-center"
                 style={{
                     backgroundColor: bgColor,
-                    opacity: "0.3",
+                    opacity: "0.7",
                 }}
             >
                 <Icon />
