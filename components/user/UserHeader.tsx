@@ -10,7 +10,7 @@ const UserHeader = () => {
                 title="Users"
             />
 
-            <div className="grid lg:grid-cols-4 md:grid-col-3 sm:grid-cols-2 xsm:grid-cols-1 gap-2">
+            <div className="grid lg:grid-cols-4 md:grid-col-3 sm:grid-cols-2 xs:grid-cols-1 gap-2">
                 {userHeaderContent.map((item) => (
                     <UserGridBox
                         icon={item.icon}

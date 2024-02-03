@@ -3,9 +3,11 @@ import { HiOutlineUsers } from "react-icons/hi";
 import { FaUsers } from "react-icons/fa";
 import { FaCoins } from "react-icons/fa";
 
+import { IconType } from "react-icons"
+
 
 interface userHeaderContentProps {
-    icon: string;
+    icon: IconType;
     title: string;
     stat: string;
     textColor: string;

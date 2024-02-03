@@ -16,7 +16,7 @@ import { useParams, useRouter } from "next/navigation";
 interface SearchBarProps {
     data: {
         label: string;
-        type: any;
+        type: "email" | "organization" | "username" | "contact" | "date";
         data: {
             // icon: React.ReactNode;
             name: string;
@@ -47,6 +47,27 @@ const SearchBar = ({
     }, [])
 
 
+    const onClick = ({ id, type }: { id: string, type: "email" | "organization" | "username" | "contact" | "date" }) => {
+        setOpen(false);
+
+        if (type === "email") {
+            return router.push(`/users/${params?.id}`);
+        }
+
+        if (type === "organization") {
+            return router.push(`/users/${params?.id}`);
+        }
+        if (type === "username") {
+            return router.push(`/users/${params?.id}`);
+        }
+        if (type === "contact") {
+            return router.push(`/users/${params?.id}`);
+        }
+        if (type === "date") {
+            return router.push(`/users/${params?.id}`);
+        }
+    }
+
     return (
         <>
             <div
@@ -69,7 +90,7 @@ const SearchBar = ({
                     <CommandEmpty>
                         No Results found
                     </CommandEmpty>
-                    {data.map(({ label, data, type }) => {
+                    {data.map(({ label, data }) => {
 
                         if (!data?.length) return null;
 
@@ -78,7 +99,9 @@ const SearchBar = ({
                                 {data?.map(({ id, name }: any) => {
 
                                     return (
-                                        <CommandItem key={id} onSelect={() => onClick({ id, type })}>
+                                        <CommandItem
+                                            key={id}
+                                            onSelect={() => onClick({ id, type })}>
 
                                             <span>{name}</span>
                                         </CommandItem>
