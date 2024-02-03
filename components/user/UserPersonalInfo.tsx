@@ -8,7 +8,7 @@ interface UserPersonalInfoProps {
     bvn: string | undefined,
     gender: string | undefined,
     maritalStatus: string | undefined,
-    children: string | undefined,
+    childrenNo: string | undefined,
     residenceType: string | undefined,
 }
 
@@ -23,7 +23,7 @@ const UserPersonalInfo = ({
     bvn,
     gender,
     maritalStatus,
-    children,
+    childrenNo,
     residenceType,
 }: UserPersonalInfoProps) => {
 
@@ -54,7 +54,7 @@ const UserPersonalInfo = ({
         },
         {
             title: "Children",
-            text: `${children}`,
+            text: `${childrenNo}`,
         },
         {
             title: "Type of Residence",

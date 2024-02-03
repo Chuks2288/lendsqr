@@ -165,7 +165,7 @@ export const columns: ColumnDef<Payment>[] = [
         id: "actions",
         enableHiding: false,
         cell: ({ row }: any) => {
-            const payment = row.original
+            const payment: any = row.original
 
             const router = useRouter();
             return (

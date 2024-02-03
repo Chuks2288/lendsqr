@@ -9,7 +9,7 @@ import { MoveLeft } from "lucide-react"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 
-const page = () => {
+const Page = () => {
 
     const params = useParams();
 
@@ -33,35 +33,8 @@ const page = () => {
                 bankName={dataInfo?.bankName}
             />
 
-
-            {/* 
-            <UserDetailsContent
-                id={dataInfo?.id}
-                fullName={dataInfo?.fullName}
-                contact={dataInfo?.contact}
-                email={dataInfo?.email}
-                bvn={dataInfo?.bvn}
-                gender={dataInfo?.gender}
-                maritalStatus={dataInfo?.maritalStatus}
-                children={dataInfo?.children}
-                residenceType={dataInfo?.ResidenceType}
-                eductionLevel={dataInfo?.educationLevel}
-                employmentStatus={dataInfo?.employmentStatus}
-                employmentSector={dataInfo?.employmentSector}
-                employmentDuration={dataInfo?.employmentDuration}
-                officeEmail={dataInfo?.officeEmail}
-                monthlyIncome={dataInfo?.monthlyIncome}
-                loanRepayment={dataInfo?.loanRepayment}
-                twitter={dataInfo?.twitter}
-                facebook={dataInfo?.facebook}
-                instagram={dataInfo?.instagram}
-                guarantorFullName={dataInfo?.guarantorFullName}
-                guarantorContact={dataInfo?.guarantorContact}
-                guarantorEmail={dataInfo?.guarantorEmail}
-                relationship={dataInfo?.relationship}
-            /> */}
         </main>
     )
 }
 
-export default page
+export default Page

@@ -60,6 +60,7 @@ const NavigationAction = () => {
 
                 {organizations.map((organization) => (
                     <DropdownMenuItem
+                        key={organization.name}
                         className='cursor-pointer'
                     >
                         {organization.name}

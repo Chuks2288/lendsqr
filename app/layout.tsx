@@ -4,11 +4,10 @@ import './globals.css'
 import { cn } from '@/lib/utils'
 import ToastProvider from '@/provider/ToastProvider'
 import ClientOnly from '@/components/ClientOnly'
-
 import { siteConfig } from '@/config/site'
 
 
-export const fontSans = FontSans({
+export const fontSans: any = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })

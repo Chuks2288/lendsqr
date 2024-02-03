@@ -15,7 +15,7 @@ const NavigationSidebar = () => {
 
             <div className="my-4">
                 {dashboard.map((items) => (
-                    <NavigationTitle title={items.title}>
+                    <NavigationTitle title={items.title} key={items.title}>
                         {items.content.map((item) => (
                             <NavigationItem
                                 key={item.id}

@@ -47,7 +47,7 @@ const UserDetailsHeaderRow = ({
                     />
 
                     <div className="text-sm flex flex-col">
-                        <h5 className="font-semibold">User's Tier</h5>
+                        <h5 className="font-semibold">Users Tier</h5>
                         <Rating value={rating} />
                     </div>
 

@@ -22,7 +22,7 @@ const UserGeneralDetails = () => {
                 bvn={dataInfo?.bvn}
                 gender={dataInfo?.gender}
                 maritalStatus={dataInfo?.maritalStatus}
-                children={dataInfo?.children}
+                childrenNo={dataInfo?.childrenNo}
                 residenceType={dataInfo?.ResidenceType}
             />
 
