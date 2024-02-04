@@ -16,11 +16,11 @@ import { useParams, useRouter } from "next/navigation";
 interface SearchBarProps {
     data: {
         label: string;
-        type: "email" | "organization" | "username" | "contact" | "date";
+        type?: "email" | "organization" | "username" | "contact" | "date";
         data: {
             // icon: React.ReactNode;
             name: string;
-            id: string;
+            id?: string;
         }[] | undefined
     }[]
 }
@@ -96,7 +96,7 @@ const SearchBar = ({
 
                         return (
                             <CommandGroup key={label} heading={label} className="bg-white">
-                                {data?.map(({ id, name }: any) => {
+                                {data?.map(({ id, name, type }: any) => {
 
                                     return (
                                         <CommandItem

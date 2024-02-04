@@ -13,7 +13,6 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 import { signOut, useSession } from "next-auth/react";
-import Cookies from 'js-cookie';
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";

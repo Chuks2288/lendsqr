@@ -28,7 +28,7 @@ export type Payment = {
     date: string,
     status: "Pending" | "Inactive" | "Blacklisted" | "Active"
 
-    fullName: string,
+    fullName?: string,
     UserTier: number,
     amount: number,
     accountNo: string,
@@ -56,6 +56,11 @@ export type Payment = {
     guarantorContact: string,
     guarantorEmail: string,
     relationship: string,
+
+
+    pageCount?: any;
+    pageIndex?: any;
+    gotoPage?: any
 }
 
 
@@ -500,36 +505,8 @@ export const userTableHeader: userTableHeaderProps[] = [
     },
     {
         titleHead: "Status",
-
-        fullName: "Grace Effiong",
-        UserTier: 1,
-        amount: 200000.00,
-        accountNo: "867495768",
-        bankName: "Providus Bank",
-        customerImage: "/images/customer.svg",
-        maritalStatus: "Single",
-        childrenNo: "None",
-        ResidenceType: "Parent's Apartment",
-        bvn: "95874652345",
-        gender: "female",
-
-        educationLevel: "B.sc",
-        employmentStatus: "Employed",
-        employmentSector: "FinTech",
-        employmentDuration: "2",
-        officeEmail: "grace@lendsqr.com",
-        monthlyIncome: "200,000.00 - 400,000.00",
-        loanRepayment: "40,000",
-
-        twitter: "@grace_effiom",
-        facebook: "Grace Effiom",
-        instagram: "@grace_effiom",
-
-        guarantorFullName: "Debby Ogana",
-        guarantorContact: "0706078922",
-        guarantorEmail: "debby@gmail.com",
-        relationship: "Sister",
         icon: "/images/filter.png",
+
     },
 ]
 

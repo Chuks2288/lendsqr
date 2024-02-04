@@ -5,9 +5,7 @@ import Image from "next/image";
 
 import * as React from "react"
 import {
-    CaretSortIcon,
     ChevronDownIcon,
-    DotsHorizontalIcon,
 } from "lucide-react";
 
 import { ListFilter, MoreVertical } from "lucide-react";
@@ -53,6 +51,9 @@ import { useRouter } from "next/navigation";
 import { data } from "./data";
 
 import { Payment } from "./data";
+import Link from "next/link";
+
+
 
 export const columns: ColumnDef<Payment>[] = [
     {
@@ -166,7 +167,6 @@ export const columns: ColumnDef<Payment>[] = [
         enableHiding: false,
         cell: ({ row }: any) => {
             const payment: any = row.original
-
             return (
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -180,18 +180,20 @@ export const columns: ColumnDef<Payment>[] = [
 
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end" className="bg-white">
-                        <DropdownMenuItem
-                            className="cursor-pointer flex items-center gap-1"
-                            onClick={() => router.push(`/dashboard/users/${row.original.id}`)}
-                        >
-                            <Image
-                                src="/images/view.svg"
-                                alt="view"
-                                width="14"
-                                height="14"
-                                className="object-cover"
-                            />
-                            View Details
+                        <DropdownMenuItem>
+                            <Link
+                                className="cursor-pointer flex items-center gap-1"
+                                href={`/dashboard/users/${row.original.id}`}
+                            >
+                                <Image
+                                    src="/images/view.svg"
+                                    alt="view"
+                                    width="14"
+                                    height="14"
+                                    className="object-cover"
+                                />
+                                View Details
+                            </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem
                             className="cursor-pointer flex items-center gap-1"
@@ -227,8 +229,6 @@ export const columns: ColumnDef<Payment>[] = [
 ]
 
 const UserTable = () => {
-
-    const router = useRouter();
 
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -312,7 +312,7 @@ const UserTable = () => {
                     </Table>
                 </div>
                 <div className="flex items-center justify-between space-x-2 py-4">
-                    <div className="space-x-2">
+                    {/* <div className="space-x-2">
                         <span>
                             {table.pageCount
                                 ? `Showing page ${table.pageIndex + 1} of ${table.pageCount}`
@@ -330,7 +330,7 @@ const UserTable = () => {
                                 className="cursor-pointer"
                             />
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

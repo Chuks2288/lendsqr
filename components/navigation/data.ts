@@ -18,7 +18,7 @@ export const dashboard: dashboardProps[] = [
                 dashboardId: "1",
                 icon: "/images/dashboard/menu.svg",
                 subTitle: "Dashboard",
-                path: "/dashboard"
+                path: "/dashboard/home"
             }
         ],
     },

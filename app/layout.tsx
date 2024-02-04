@@ -7,9 +7,9 @@ import ClientOnly from '@/components/ClientOnly'
 import { siteConfig } from '@/config/site'
 
 
-export const fontSans: any = FontSans({
+export const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-sans" as any,
+  variable: "--font-sans" as never,
 })
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased scroll-smooth overflow-y-scroll no-scrollbar",
-          fontSans.variable
+          fontSans
         )}>
         <ClientOnly>
           <ToastProvider />
