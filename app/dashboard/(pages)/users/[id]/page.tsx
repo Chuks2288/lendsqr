@@ -9,7 +9,7 @@ import { MoveLeft } from "lucide-react"
 import Link from "next/link"
 import { useParams } from "next/navigation"
 
-const Page = () => {
+const UserIdPage = () => {
 
     const params = useParams();
 
@@ -37,4 +37,4 @@ const Page = () => {
     )
 }
 
-export default Page
+export default UserIdPage

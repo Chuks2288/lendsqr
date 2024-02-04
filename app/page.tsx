@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect } from "react"
+
 import { useRouter } from "next/navigation"
 
-export default function Home() {
-
+const Page = () => {
 
   const router = useRouter();
 
@@ -12,6 +12,7 @@ export default function Home() {
     router.push("/register");
   }, []);
 
-
-  return null;
+  return null
 }
+
+export default Page

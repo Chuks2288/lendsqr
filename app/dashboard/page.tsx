@@ -15,7 +15,7 @@ const Page = () => {
     }, []);
 
 
-    return router.push("")
+    return null
 }
 
 export default Page;
