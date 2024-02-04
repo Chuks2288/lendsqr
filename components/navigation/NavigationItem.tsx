@@ -3,6 +3,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useParams } from "next/navigation";
 import { usePathname } from "next/navigation";
+import { Skeleton } from "../ui/skeleton";
 
 interface NavigationItemProps {
     id: string;
@@ -11,7 +12,7 @@ interface NavigationItemProps {
     path: string;
 }
 
-const NavigationItem = ({
+export const NavigationItem = ({
     id,
     icon,
     subTitle,
@@ -51,4 +52,3 @@ const NavigationItem = ({
     )
 }
 
-export default NavigationItem

@@ -9,7 +9,7 @@ import { siteConfig } from '@/config/site'
 
 export const fontSans: any = FontSans({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-sans" as any,
 })
 
 export const metadata: Metadata = {

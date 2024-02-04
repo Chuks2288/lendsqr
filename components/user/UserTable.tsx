@@ -167,7 +167,6 @@ export const columns: ColumnDef<Payment>[] = [
         cell: ({ row }: any) => {
             const payment: any = row.original
 
-            const router = useRouter();
             return (
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -228,6 +227,8 @@ export const columns: ColumnDef<Payment>[] = [
 ]
 
 const UserTable = () => {
+
+    const router = useRouter();
 
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
